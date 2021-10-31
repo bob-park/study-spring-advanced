@@ -80,6 +80,8 @@ public class ThreadLocalLogTrace implements LogTrace {
     TraceId traceId = traceIdHolder.get();
 
     if (traceId.isFirstLevel()) {
+      // ! 해당 쓰레드에서 사용후에 필요 없는 경우 반드시 삭제하자
+      // 쓰레드 풀 사용시 어떤 쓰레드가 실행될지 모르니까!!
       traceIdHolder.remove(); // destroy
     } else {
       traceIdHolder.set(traceId.createPreviousId());
