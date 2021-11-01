@@ -1,6 +1,6 @@
 package hello.advanced.trace.strategy.code.strategy;
 
-@FunctionalInterface
+//@FunctionalInterface
 public interface Strategy {
   void call();
 }
