@@ -91,4 +91,6 @@ class ContextV1Test {
     ContextV1 context2 = new ContextV1(() -> log.info("비지니스 로직2 실행"));
     context2.execute();
   }
+
+
 }
