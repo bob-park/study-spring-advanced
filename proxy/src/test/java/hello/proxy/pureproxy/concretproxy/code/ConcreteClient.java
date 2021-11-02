@@ -9,6 +9,6 @@ public class ConcreteClient {
   }
 
   public void execute() {
-    concreteLogic.operaction();
+    concreteLogic.operation();
   }
 }
