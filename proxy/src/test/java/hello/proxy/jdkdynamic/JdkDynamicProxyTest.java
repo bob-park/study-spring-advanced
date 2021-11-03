@@ -15,6 +15,7 @@ class JdkDynamicProxyTest {
 
     TimeInvocationHandler handler = new TimeInvocationHandler(target);
 
+    // * interface 가 필수
     // proxy 동적 생성
     // proxy 의 call() 를 호출하게되면, 무조건 InvocationHandler 의 invoke() 가 실행된다.
     // 부가 기능 로직은 동적 proxy 를 사용하여 한번만 개발해서 공통으로 적용할 수 있음
