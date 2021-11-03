@@ -28,8 +28,8 @@ public class FieldLogTrace implements LogTrace {
         complete(status, null);
     }
 
-    @Override
-    public void exception(TraceStatus status, Exception e) {
+  @Override
+  public void exception(TraceStatus status, Exception e) {
         complete(status, e);
     }
 
