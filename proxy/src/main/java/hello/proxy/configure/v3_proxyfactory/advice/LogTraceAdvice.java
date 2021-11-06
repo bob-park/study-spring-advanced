@@ -22,7 +22,7 @@ public class LogTraceAdvice implements MethodInterceptor {
 
             Method method = invocation.getMethod();
 
-            String message = method.getDeclaringClass().getSimpleName() + method.getName();
+            String message = method.getDeclaringClass().getSimpleName() + "." + method.getName();
 
             status = trace.begin(message);
 
