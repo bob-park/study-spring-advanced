@@ -7,6 +7,18 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 
+
+/**
+ *
+ * 설명
+ *
+ * <pre>
+ *     * @Aspect
+ *     - AnnotationAwareAspectJAutoProxyCreator 는 Advisor 를 자동으로 찾아와서 필요한 곳에 Proxy 를 생성하고 적용
+ *     - 추가로, @Aspect 를 찾아서 Advisor 를 생성해줌
+ * </pre>
+ *
+ */
 @Slf4j
 @Aspect
 public class LogTraceAspect {
