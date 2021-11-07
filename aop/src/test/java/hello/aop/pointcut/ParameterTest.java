@@ -58,13 +58,13 @@ class ParameterTest {
 
         @Before("allMember() && this(obj)")
         public void thisArgs(JoinPoint joinPoint, MemberService obj) {
-            // Spring Container 에 실제 등록된 객체가 넘어옴 - proxy 객체
+            // Spring Container 에 실제 등록된 객체가 넘어옴 - proxy 객체 대상
             log.info("[this] {}, obj={}", joinPoint.getSignature(), obj.getClass());
         }
 
         @Before("allMember() && target(obj)")
         public void targetArgs(JoinPoint joinPoint, MemberService obj) {
-            // 실제 대상의 구현체가 넘어옴 - proxy 객체가 실제로 호출한 객체
+            // 실제 대상의 구현체가 넘어옴 - proxy 객체가 실제로 호출한 객체 대상
             log.info("[target] {}, obj={}", joinPoint.getSignature(), obj.getClass());
         }
 
