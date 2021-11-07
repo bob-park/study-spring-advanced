@@ -1,4 +1,4 @@
-package hello.aop.order.aop;
+package hello.aop.order.aop.order;
 
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
@@ -45,7 +45,7 @@ public class AspectV6Advice {
      * @return
      * @throws Throwable
      */
-    @Around("hello.aop.order.aop.Pointcuts.orderAndService()")
+    @Around("hello.aop.order.aop.order.Pointcuts.orderAndService()")
     public Object doTransaction(ProceedingJoinPoint joinPoint) throws Throwable {
 
         try {
@@ -79,7 +79,7 @@ public class AspectV6Advice {
      *
      * @param joinPoint
      */
-    @Before("hello.aop.order.aop.Pointcuts.orderAndService()")
+    @Before("hello.aop.order.aop.order.Pointcuts.orderAndService()")
     public void doBefore(JoinPoint joinPoint) {
         log.info("[doBefore] {}", joinPoint.getSignature());
     }
@@ -99,7 +99,7 @@ public class AspectV6Advice {
      * @param joinPoint
      * @param result
      */
-    @AfterReturning(value = "hello.aop.order.aop.Pointcuts.orderAndService()", returning = "result")
+    @AfterReturning(value = "hello.aop.order.aop.order.Pointcuts.orderAndService()", returning = "result")
     public void doReturn(JoinPoint joinPoint, Object result) {
         log.info("[return] {} return={}", joinPoint.getSignature(), result);
     }
@@ -115,7 +115,7 @@ public class AspectV6Advice {
      * @param joinPoint
      * @param ex
      */
-    @AfterThrowing(value = "hello.aop.order.aop.Pointcuts.orderAndService()", throwing = "ex")
+    @AfterThrowing(value = "hello.aop.order.aop.order.Pointcuts.orderAndService()", throwing = "ex")
     public void doThrowing(JoinPoint joinPoint, Exception ex) {
         log.info("[ex] {} message={}", joinPoint.getSignature(), ex.getMessage());
     }
@@ -131,7 +131,7 @@ public class AspectV6Advice {
      *
      * @param joinPoint
      */
-    @After(value = "hello.aop.order.aop.Pointcuts.orderAndService()")
+    @After(value = "hello.aop.order.aop.order.Pointcuts.orderAndService()")
     public void doAfter(JoinPoint joinPoint) {
         log.info("[after] {}", joinPoint.getSignature());
     }
